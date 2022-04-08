@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Cake Shop</title>
+  <style>
+    .container-fluid {
+      background-color: rgb(207, 201, 201);
+    }
+
+    .slider {
+      
+      width: 101%;
+    }
+
+ 
+
+    .img img {
+      width: 100%;
+      box-shadow: 2px 5px 5px grey;
+    }
+
+    .cities {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+  
+
+
+    .city {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      flex-wrap: wrap;
+
+    }
+
+    .city img {
+      width: 100px;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 2px 5px 5px grey;
+    }
+
+    .city img:hover {
+      transition: 0.2s;
+      transform: scale(1.05);
+    }
+
+    .table {
+      
+      width: 100%;
+      margin: 10px;
+
+    }
+
+    .content {
+      margin: auto;
+    }
+
+    .table h3 {
+      margin: 10px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table {
+      border: 2px solid grey;
+    }
+
+    th {
+      background-color: grey;
+    }
+
+    td {
+      background-color: rgb(197, 193, 193);
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+    body {
+      line-height: 1.5;
+      font-family: "Poppins", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+
+    .cakes {
+      width: 100%;
+      
+      height: auto;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+  
+
+
+    .cake {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      flex-wrap: wrap;
+
+    }
+
+    .cake img {
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 2px 5px 5px grey;
+    }
+
+    .cake img:hover {
+      transition: 0.2s;
+      transform: scale(1.25);
+    }
+
+
+
+
+    .info {
+      background-color: #f1e7e7;
+      width: 100%;
+
+    }
+
+    .para {
+      margin: auto;
+    }
+
+    .info h3 {
+      margin-top: 30px;
+    }
+
+    .footer {
+      background-color: rgb(207, 201, 201);
+      padding: 70px 0;
+
+    }
+
+    .footer-col {
+      width: 25%;
+      padding: 0 15px;
+    }
+
+    .footer-col h4 {
+      font-size: 18px;
+      color: #000000;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .footer-col h4::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+
+    .footer-col ul li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 300;
+      color: #000000;
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+      color: #000000;
+      padding-left: 8px;
+    }
+
+    .footer-col .social-links a {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(0, 0, 0, 0.2);
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #000000;
+      transition: all 0.5s ease;
+    }
+
+    .footer-col .social-links a:hover {
+      color: #ffffff;
+      background-color: #000000;
+    }
+    
+    /*responsive*/
+    @media (max-width: 767px) {
+      .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (max-width:500px) {
+      body{
+        margin-left: 10px;
+      }
+      
+    }
+
+    @media (max-width: 574px) {
+      .footer-col {
+        width: 100%;
+      }
+    }
+    .btn{
+      margin: 8px;
+    }
+    nav{
+      background-color: #c7b064;
+      width: 101%;
+      
+      box-shadow: 2px 5px 13px 2px rgba(0, 0, 0, 0.22);
+     
+    }
+    .navbar-brand{
+      color: rgb(66, 32, 20);
+      font-weight: bold;
+    }
+    .nav-item{
+      font-size: 1.8rem;
+      
+      font-weight: bold;
+      margin-left: 30px;
+    
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Cake Shop</a>
+   
+    
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active " href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link " href="#">About</a>
+        <a class="nav-item nav-link " href="#">Contact</a>
+        
+      </div>
+    
+  </nav>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <button type="button" class="btn btn-md" data-toggle="modal" data-target="#myModal"><span
+              class="glyphicon glyphicon-user"></span> Sign Up</button>
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form-horizontal" >
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="Fname">First Name</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="fname" class="form-control" id="Fname" placeholder="Enter Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="Lname">Last Name</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="lname" class="form-control" id="Lname" placeholder="Enter Name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="email">Email:</label>
+                      <div class="col-sm-10">
+                        <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="pwd">Password:</label>
+                      <div class="col-sm-10">
+                        <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
+                      </div>
+                    </div>
+                   
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li><button type="button" class="btn btn-md" data-toggle="modal" data-target="#MyModal"><span
+          class="glyphicon glyphicon-log-in"></span> Login</button>
+      <div id="MyModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+              <form class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="email">Email:</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="pwd">Password:</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                  </div>
+                </div>
+               
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div></li>
+      </ul>
+    
+  <div class="slider slide">
+    <div class="img">
+      <img src="images/slide1.png" alt="img" />
+    </div>
+  </div>
+  <div class="cities">
+    <div class="city">
+      <div class="name">
+        <img src="images/delhi.png" alt="Delhi" />
+        <p align="center"><b>Delhi</b></p>
+      </div>
+      <div class="name">
+        <img src="images/mumbai.png" alt="Mumbai" />
+        <p align="center"><b>Mumbai</b></p>
+      </div>
+      <div class="name">
+        <img src="images/bangalore.png" alt="Bangalore" />
+        <p align="center"><b>Bangalore</b></p>
+      </div>
+      <div class="name">
+        <img src="images/kolkata.png" alt="Kolkata" />
+        <p align="center"><b>Kolkata</b></p>
+      </div>
+      <div class="name">
+        <img src="images/hyd.png" alt="Hydarabad" />
+        <p align="center"><b>Hydarabad</b></p>
+      </div>
+      <div class="name">
+        <img src="images/pune.png" alt="Pune" />
+        <p align="center"><b> Pune</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="table content">
+    <h3 type="button">Online Cake Delivery</h3>
+    <table class="table table-bordered">
+      <tr>
+        <th>Cakes By Occasion</th>
+        <th>Cakes By Type</th>
+        <th>Shipping Method</th>
+      </tr>
+      <tr>
+        <td>Birthday Cake</td>
+        <td>Designer Cake</td>
+        <td>Midnight Delivery</td>
+      </tr>
+      <tr>
+        <td>Anniversary Cake</td>
+        <td>Photo Cake</td>
+        <td>Delivery in 50+ Cities</td>
+      </tr>
+      <tr>
+        <td>Cakes For All Occasions</td>
+        <td>Eggless Cakes and much more</td>
+        <td>Midnight Delivery</td>
+      </tr>
+    </table>
+  </div>
+  <div class="cakes">
+    <div class="cake">
+      <div class="name">
+        <img src="images/Cakes.png" alt="Delhi" />
+       
+      </div>
+      <div class="name">
+        <img src="images/cake1.jpg" alt="Mumbai" />
+       
+      </div>
+      <div class="name">
+        <img src="images/cake2.jpg" alt="Bangalore" />
+      
+      </div>
+      <div class="name">
+        <img src="images/cake3.jpg" alt="Kolkata" />
+       
+      </div>
+      <div class="name">
+        <img src="images/cake4.jpg" alt="Hydarabad" />
+       
+      </div>
+     
+    </div>
+  </div>
+  <div class="info para">
+    <h3>
+      Get Online Cake Delivery for a Variety of Cake Flavors
+    </h3>
+    <p>
+      The best part about cake is that there can be a large variety of flavors
+      and one can experiment with it quite often. Any flourishing cake shop
+      would vouch by this criteria because variety keeps people interested. In
+      our online cake shop, you would discover a plethora of cake flavors and
+      we take a bit of pride in that. You would find a cake flavor for all
+      your family members, friends, and relatives having varied preferences.
+      Some would demand a chocolate cake while some would demand a pineapple
+      flavored cake. Here, you would find the most innovative mix of cake
+      flavors. For example, in the chocolate category of cake, there is a
+      thrilling chocolate truffle cake, evergreen Black Forest Cake, and the
+      enticing triple chocolate cake. Apart from that red velvet cake, lemon
+      zest cake, orange tangy cake, cheesecake, mango cake, strawberry cake,
+      butterscotch cake, caramel cake, etc. also graces our online portal.
+      Look out for that desirable one and get the cake home delivery without
+      much hassle anywhere in India or abroad.<br>
+      <br>
+      In general view, cake includes
+      eggs as a softening agent. But that doesn’t mean pure vegans cannot
+      enjoy cakes. We have eggless cake category for most of the flavors and
+      thus the strict vegetarians would also have a great time at your party.
+      A cake can be of many types like cream cake, fondant cake, semi-fondant
+      cake, cheesecake, cupcakes, muffins, designer cakes etc. We have all
+      those types of cakes available in great variety of flavors. Another
+      strength of our website is that you can get personalized cakes here
+      which can include a picture of your loved ones. Keep looking for your
+      favorite cakes and have a lovely celebration .
+     
+    </p>
+    <button class="btn btn-danger">Buy Now</button>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shipping</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>online shop</h4>
+          <ul>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Pastries</a></li>
+            <li><a href="#">Cupcakes</a></li>
+            <li><a href="#">Custom Cakes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
